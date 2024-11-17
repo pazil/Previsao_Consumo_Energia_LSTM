@@ -60,6 +60,7 @@ Após o treinamento do modelo, geramos previsões para os dados de teste e para 
 - As previsões para o consumo dos próximos 12 meses.
 
 ![Gráfico de Previsão no Conjunto de Teste](imagens/consumo_real_vs_previsto.png)
+
 ![Previsão para os Próximos 12 Meses](imagens/previsao_futura.png)
 
 ### 6. Resultados e Conclusões
