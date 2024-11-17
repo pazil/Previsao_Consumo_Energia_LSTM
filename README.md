@@ -66,26 +66,18 @@ Após o treinamento do modelo, geramos previsões para os dados de teste e para 
 ### 6. Resultados e Conclusões
 
 #### Precisão do Modelo
-O modelo apresentou um erro MSE de aproximadamente 753 bilhões e um RMSE de cerca de 867 mil, o que indica que as previsões do modelo estão distantes dos valores reais em termos de precisão. O modelo capturou uma tendência média, mas teve dificuldades em reproduzir os picos e vales do consumo.
+A precisão do modelo foi baixa, com um erro quadrático médio (MSE) de aproximadamente 753 bi e uma raiz do erro quadrático médio (RMSE) de cerca de 867 mil. Esses valores elevados sugerem que as previsões estão significativamente distantes dos valores reais de consumo, reforçando que o modelo está subajustado para os dados. O comportamento linear nas previsões dos próximos 12 meses confirma que o modelo não conseguiu capturar adequadamente a sazonalidade e os picos característicos do consumo energético.
 
 #### Importância do Número de Consumidores
 O número de consumidores foi incluído como uma variável adicional, pois ele influencia diretamente o consumo total de energia. A inclusão dessa variável ajuda o modelo a capturar melhor o comportamento dos dados.
 
 #### Sugestões de Melhorias
-1. **Ajuste de Hiperparâmetros**: Aumentar o número de neurônios, adicionar mais camadas LSTM e ajustar a taxa de dropout podem melhorar o desempenho.
-2. **Variáveis Adicionais**: Incluir variáveis como indicadores climáticos ou econômicos pode ajudar o modelo a entender melhor as variações no consumo.
-3. **Modelos Alternativos**: Experimentar outras arquiteturas, como modelos híbridos com LSTM e camadas de atenção, pode melhorar a previsão de séries temporais complexas.
+1. **Ajuste de Hiperparâmetros**: Experimentar com uma quantidade maior de neurônios na camada LSTM, adicionar mais camadas LSTM e ajustar a taxa de Dropout podem ajudar o modelo a capturar melhor as variações nos dados.
 
----
+2. **Incremento da Arquitetura do Modelo**: Explorar arquiteturas mais complexas, como a combinação de LSTM com camadas de atenção, ou até modelos baseados em Transformers, que podem capturar dependências temporais de maneira mais eficaz.
 
-## Como Executar o Projeto
+3. **Incorporação de Variáveis Externas**: Incluir dados adicionais, como variáveis climáticas ou econômicas, que podem influenciar o consumo de energia, ajudaria o modelo a entender melhor os fatores que causam as oscilações no consumo.
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/pazil/Previsao_Consumo_Energia_LSTM.git
+4. **Expansão do Conjunto de Dados**: Se possível, aumentar a quantidade de dados históricos para que o modelo tenha mais informações sobre padrões de longo prazo.
 
-2. Instale as dependências:
-
-    pip install -r requirements.txt
-
-3. Abra o notebook "notebooks/analise_exploratoria.ipynb" para seguir todas as etapas do projeto.
+Essas melhorias poderiam aumentar a precisão do modelo e sua capacidade de prever com mais realismo o consumo energético futuro.
